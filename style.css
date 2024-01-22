@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@700;900&display=swap');
+
+:root {
+    --darkBlue: #2A324B;
+    --grayBlue: #58699D;
+    --lightGray: #E1E5EE;
+    --white: #fff;
+
+    --montserrat: 'Montserrat', sans-serif;
+    --roboto: 'Roboto', sans-serif;
+    --fontSize: 20px;
+}
+
+body {
+    font-family: var(--montserrat);
+    font-weight: 500;
+    font-size: var(--fontSize);
+    background-color: var(--lightGray);
+}
+
+div {
+    margin: 8rem auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1650px;
+}
+
+nav ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    background-color: var(--darkBlue);
+    color: var(--white);
+    font-family: var(--roboto);
+    flex-grow: 1;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0;
+}
+
+.clicked {
+    background-color: var(--white);
+    color: var(--darkBlue);
+}
+
+main {
+    background-color: var(--white);
+    padding: 8rem;
+}
+
+article h1{
+    color: var(--darkBlue);
+}
+
+.title {
+    color: var(--grayBlue);
+}
