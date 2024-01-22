@@ -8,11 +8,13 @@ function start() {
     document.getElementById("nav").innerHTML = nav
 }
 
-start()
+//start() function navClick() starts on auto and it runs start(), so no need for start() before it anymore
+
+navClick("HTML")
 
 function navClick(clicked) {
     start()
-    
+
     let content = ""
     let filteredCat = resources.filter(filter => filter.category === clicked)
 
