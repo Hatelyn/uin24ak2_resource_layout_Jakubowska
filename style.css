@@ -58,10 +58,43 @@ main {
     padding: 8rem;
 }
 
+/*Etter farge-sjekk med ulike verktøy, så fant jeg ut at hovedinnhold og list styling inni den er svart i skissen. 
+Derfor bestemte jeg å ikke bytte farge til det. Det er bare titelen og liste-elementer som hadde farge fra fargekodene der.*/
 article h1{
     color: var(--darkBlue);
 }
 
 .title {
     color: var(--grayBlue);
+}
+
+@media only screen and (max-width: 965px) {
+
+    nav ul li {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    :root {
+        --fontSize: 16px;
+    }
+
+    div {
+        margin: 0;
+    }
+
+    nav ul{
+        display: block;
+    }
+
+    nav ul li {
+        padding: 0.5rem;
+        font-size: var(--fontSize);
+    }
+
+    main {
+        padding: 2rem 2rem 8rem 2rem;
+    }
 }
