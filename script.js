@@ -2,7 +2,11 @@
 function start() {
     let nav = `<ul>`
 
-    resources.map(element => nav += `<li id="${element.category}" onClick="navClick('${element.category}')">${element.category}</li>`) 
+    resources.map(element => {
+        //Bruker split for ID, så det inneholder ingen mellomrom(HTML validator viste det som en rød feil). Kilde: https://bobbyhadz.com/blog/javascript-get-first-word-of-string
+        const split = `${element.category}`.split(' ')[0]
+        nav += `<li id="${split}" onClick="navClick('${element.category}')">${element.category}</li>`
+    }) 
 
     nav += `</ul>`
 
@@ -27,8 +31,10 @@ function navClick(clicked) {
     filteredCat.map(e => {
         content += `<article><h1>${e.category}</h1><p>${e.text}</p><ul>`
 
+        //Split igjen for å finne riktig ID.
+        const split2 = `${e.category}`.split(' ')[0]
         //La til "clicked" klasse for trykket elements nav. 
-        let open = document.getElementById(`${e.category}`)
+        let open = document.getElementById(`${split2}`)
         open.classList.toggle("clicked")
 
         e.sources.map(link => content += `<li><a class="title" href="${link.url}">${link.title}</a></li>`)
